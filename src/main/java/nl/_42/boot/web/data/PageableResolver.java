@@ -67,7 +67,7 @@ class PageableResolver {
     public static Pageable getPageable(HttpServletRequest request, Sort sort) {
         int page = getParameterAsInteger(request, PAGE_PARAMETER, FALLBACK_DEFAULT_PAGE);
         int size = getParameterAsInteger(request, SIZE_PARAMETER, FALLBACK_DEFAULT_SIZE);
-        return new PageRequest(page, size, sort);
+        return PageRequest.of(page, size, sort);
     }
 
     private static int getParameterAsInteger(HttpServletRequest request, String name, int defaultValue) {
