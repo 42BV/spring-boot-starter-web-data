@@ -1,7 +1,9 @@
-package nl._42.boot.web.data;
+package nl._42.boot.web.data.paging;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import nl._42.boot.web.data.domain.User;
+import nl._42.boot.web.data.domain.UserResult;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.data.domain.Page;
@@ -27,18 +29,6 @@ public class PagesTest {
 
   private UserResult map(User user) {
     return new UserResult(user.getName());
-  }
-
-  @Getter
-  @AllArgsConstructor
-  public static class User {
-    private final Long id;
-    private final String name;
-  }
-
-  @AllArgsConstructor
-  public static class UserResult {
-    public final String name;
   }
 
 }

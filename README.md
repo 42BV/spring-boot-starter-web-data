@@ -1,13 +1,9 @@
 # Spring Boot Starter Web Data
 
-Provides additional helpers between Spring Web and Data.
+Automatically configures the web handling based on conventions.
 
-## Default sorts on entity
+## Paging and sorting
 
-```java
-@DefaultSort({"name", "id"})
-public class User {
-    private Long id;
-    private String name;
-}
-```
+## Error handling
+
+## No content
